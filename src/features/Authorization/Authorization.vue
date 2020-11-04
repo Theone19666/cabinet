@@ -36,6 +36,7 @@
 </template>
 
 <script lang="ts">
+import { Route } from "vue-router";
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { IAuth } from "../../interfaces";
 
@@ -54,7 +55,7 @@ export default class Authorization extends Vue {
 	error = "";
 
 	submit() {
-		const validate = this.$refs.form.validate();
+		const validate = (this.$refs.form as Vue & { validate: () => boolean }).validate();
 		if (validate) {
 			this.getAuth();
 		}

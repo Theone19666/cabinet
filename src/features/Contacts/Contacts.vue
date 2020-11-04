@@ -92,7 +92,7 @@
 						</v-dialog>
 					</v-toolbar>
 				</template>
-				<template #item.actions="{ item }">
+				<template v-slot:[`item.actions`]="{ item }">
 					<v-icon small class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
 					<v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
 				</template>
@@ -205,6 +205,7 @@ export default class Contacts extends Vue {
 		this.$nextTick(() => {
 			this.editedItem = { ...this.defaultItem };
 			this.editedIndex = -1;
+			(this.$refs.form as Vue & { resetValidation: () => void }).resetValidation();
 		});
 	}
 
@@ -229,7 +230,7 @@ export default class Contacts extends Vue {
 	}
 
 	save() {
-		const validate = this.$refs.form.validate();
+		const validate = (this.$refs.form as Vue & { validate: () => boolean }).validate();
 		if (validate) {
 			this.method(this.editedItem)
 				.then((resp: boolean) => {
