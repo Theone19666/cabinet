@@ -1,0 +1,72 @@
+{
+  "auth": [
+    {
+      "id": 1,
+      "login": "test",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "login": "qwerty",
+      "password": "qwerty123"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Вася",
+      "surname": "Васильев",
+      "patronymic": "Васильевич",
+      "phone": "+7(898)-766-66-66",
+      "authId": 1
+    },
+    {
+      "id": 2,
+      "name": "Пётр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "phone": "8987777777",
+      "authId": 1
+    },
+    {
+      "id": 3,
+      "name": "Сидор",
+      "surname": "Сидоров",
+      "patronymic": "Сидорович",
+      "phone": "8987888888",
+      "authId": 1
+    },
+    {
+      "id": 4,
+      "name": "Павел",
+      "surname": "Павлов",
+      "patronymic": "Павлович",
+      "phone": "8987999999",
+      "authId": 1
+    },
+    {
+      "id": 5,
+      "name": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "phone": "8987555555",
+      "authId": 2
+    },
+    {
+      "id": 6,
+      "name": "Эдуардов",
+      "surname": "Эдуард",
+      "patronymic": "Эдуардович",
+      "phone": "8987444444",
+      "authId": 2
+    },
+    {
+      "name": "тестов",
+      "surname": "тест",
+      "patronymic": "тестович",
+      "phone": "",
+      "id": 7,
+      "authId": 2
+    }
+  ]
+}
