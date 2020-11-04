@@ -1,4 +1,5 @@
 import Vue from "vue";
+// @ts-ignore
 import VueMask from "v-mask";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
