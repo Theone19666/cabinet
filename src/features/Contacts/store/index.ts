@@ -69,8 +69,8 @@ export default {
 					context.commit("addContact", resp);
 					return true;
 				})
-				.catch(() => {
-					throw new Error();
+				.catch((error) => {
+					throw new Error(error);
 				});
 		},
 		editContact: async (context: IObject, payload: IContacts) => {
@@ -94,8 +94,8 @@ export default {
 					context.commit("editContact", resp);
 					return true;
 				})
-				.catch(() => {
-					throw new Error();
+				.catch((error) => {
+					throw new Error(error);
 				});
 		},
 		deleteContact: async (context: IObject, id: number) => {
@@ -112,8 +112,8 @@ export default {
 					}
 					return false;
 				})
-				.catch(() => {
-					throw new Error();
+				.catch((error) => {
+					throw new Error(error);
 				});
 		},
 	},
